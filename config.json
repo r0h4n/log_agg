@@ -1,0 +1,7 @@
+{
+  "listen-http": "0.0.0.0:6360",
+  "db-address": "boltdb:///tmp/db.bolt",
+  "log-keep": "{\"app\":\"5m\"}",
+  "log-type": "app",
+  "log-level": "debug"
+}

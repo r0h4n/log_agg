@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go/src/github.com/r0h4n/log_agg
+    env_file:
+      - '.env'
+    ports:
+      - "6360:6360"
