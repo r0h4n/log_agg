@@ -49,3 +49,20 @@ Config File: (takes precedence over cli flags)
 #### Adding|Viewing Logs
 See http examples [here](./api/README.md)  
 
+
+
+
+Design:
+
+Requirement: Simple Log aggregator service (only supports http api)
+
+Modules:
+
+    Api, Http
+    Input, logs collector (currently only http, syslog support being added https://github.com/r0h4n/log_agg/issues/1)
+    Transform, transforms logs and channels them towards the Output/Archive module
+    Output, log file Archiver (boltdb, can publish to syslog or other products like datadog etc)
+
+TODO:
+
+    Redact, implement in the transform module in form of user defined config.redact_regex
